@@ -11,6 +11,13 @@ export default function Document() {
           type='font/woff2'
           crossOrigin='anonymous'
         />
+        <link
+          rel='preload'
+          href='/fonts/PPMondwest-Regular.woff2'
+          as='font'
+          type='font/woff2'
+          crossOrigin='anonymous'
+        />
       </Head>
       <body>
         <Main />

@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        primary: ['Inter', ...fontFamily.sans],
+        primary: ['Mondwest', ...fontFamily.sans],
       },
       colors: {
         primary: {
@@ -23,7 +23,8 @@ module.exports = {
           800: 'rgb(var(--tw-color-primary-800) / <alpha-value>)',
           900: 'rgb(var(--tw-color-primary-900) / <alpha-value>)',
         },
-        dark: '#222222',
+        dark: '#171819',
+        highlight: '#BAEC68',
       },
       keyframes: {
         flicker: {
