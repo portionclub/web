@@ -18,6 +18,11 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 This starter is using [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/), it is mandatory to use it to commit changes.
 
+### 3. Links
+
+- (fred's lit figma)[https://www.figma.com/file/j1aWuROiOzpL19GH3FZDTX/PC69?node-id=46%3A125&t=eHMRaZX5SK4fyDre-1]
+- (google doc)[https://docs.google.com/document/d/1ikxMs5YBr1QKO6GiMQPqgTLWSrrhM1ZHdFSmvB2PyVU/edit]
+
 ## Repo Configuration
 
 This repository is 🔋 battery packed with:
