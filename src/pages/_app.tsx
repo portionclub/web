@@ -5,7 +5,7 @@ import '@/styles/colors.css';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <div className='bg-dark'>
+    <div className='bg-dark text-white'>
       <Component {...pageProps} />
     </div>
   );
