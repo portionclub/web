@@ -14,11 +14,10 @@ import Seo from '../components/Seo';
 export default function HomePage() {
   return (
     <Layout>
-      {/* <Seo templateTitle='Home' /> */}
-      <Seo />
+      <Seo templateTitle='Home' />
 
       <section>
-        <p className='text-9xl'>Welcome to Portion Club 69</p>
+        <h1 className='normal text-9xl'>Welcome to Portion Club 69</h1>
         <p className='mt-16 text-4xl'>
           A creative community that actively rewards participation in its own
           evolution. Artists with the goal of bringing ideas to reality.

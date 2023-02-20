@@ -22,7 +22,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <main className='mx-auto flex max-w-[910px] flex-1 flex-col items-center justify-center text-center'>
           {children}
         </main>
-        <footer className='flex items-center border-t'>
+        <nav className='flex items-center border-t'>
           <a
             className='w-4/12 p-6 text-white'
             href='https://pc69.xyz/u/portionclub69/pages'
@@ -48,7 +48,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               Buy an NFT on Nouns Builder for access
             </div>
           </a>
-        </footer>
+        </nav>
       </div>
     </div>
   );
