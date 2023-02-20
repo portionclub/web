@@ -12,7 +12,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         loop
         className='absolute h-screen w-full'
       >
-        <source src='/video/inkblot1080.mp4' type='video/mp4; codecs="hvc1"' />
         <source src='/video/inkblot1080.webm' type='video/webm' />
       </video>
       <div className='absolute z-10 flex h-screen min-h-screen w-full flex-col'>
