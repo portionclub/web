@@ -10,7 +10,7 @@ import NextNProgress from 'nextjs-progressbar';
 import React from 'react';
 import { SWRConfig } from 'swr';
 import { configureChains, createClient, WagmiConfig } from 'wagmi';
-import { goerli, mainnet } from 'wagmi/chains';
+import { arbitrum, mainnet, optimism, polygon } from 'wagmi/chains';
 import { alchemyProvider } from 'wagmi/providers/alchemy';
 import { publicProvider } from 'wagmi/providers/public';
 
@@ -19,7 +19,7 @@ import '@/styles/colors.css';
 import '@rainbow-me/rainbowkit/styles.css';
 
 const { chains, provider } = configureChains(
-  [mainnet, goerli],
+  [mainnet, polygon, optimism, arbitrum],
   [
     alchemyProvider({ apiKey: process.env.NEXT_PUBLIC_ALCHEMY_ID || '' }),
     publicProvider(),
@@ -44,35 +44,37 @@ export const strategy = new ZDKFetchStrategy(
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <WagmiConfig client={wagmiClient}>
-      <RainbowKitProvider
-        chains={chains}
-        coolMode
-        theme={lightTheme({
-          accentColor: 'black',
-          borderRadius: 'large',
-        })}
-      >
-        <NFTFetchConfiguration networkId='1' strategy={strategy}>
-          <SWRConfig
-            value={{
-              fetcher: (resource, init) =>
-                fetch(resource, init).then((res) => res.json()),
-            }}
-          >
-            <NextNProgress
-              color='#ff89de'
-              startPosition={0.125}
-              stopDelayMs={200}
-              height={2}
-              showOnShallow={true}
-              options={{ showSpinner: false }}
-            />
-            <Component {...pageProps} />
-          </SWRConfig>
-        </NFTFetchConfiguration>
-      </RainbowKitProvider>
-    </WagmiConfig>
+    <div className='bg-dark text-white'>
+      <WagmiConfig client={wagmiClient}>
+        <RainbowKitProvider
+          chains={chains}
+          coolMode
+          theme={lightTheme({
+            accentColor: 'black',
+            borderRadius: 'large',
+          })}
+        >
+          <NFTFetchConfiguration networkId='1' strategy={strategy}>
+            <SWRConfig
+              value={{
+                fetcher: (resource, init) =>
+                  fetch(resource, init).then((res) => res.json()),
+              }}
+            >
+              <NextNProgress
+                color='#ff89de'
+                startPosition={0.125}
+                stopDelayMs={200}
+                height={2}
+                showOnShallow={true}
+                options={{ showSpinner: false }}
+              />
+              <Component {...pageProps} />
+            </SWRConfig>
+          </NFTFetchConfiguration>
+        </RainbowKitProvider>
+      </WagmiConfig>
+    </div>
   );
 }
 
