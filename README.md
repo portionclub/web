@@ -12,6 +12,12 @@ yarn install
 yarn dev
 ```
 
+to use environment variables (stored on vercel) use:
+
+```bash
+vercel dev
+```
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result. You can start editing the page by modifying `src/pages/index.tsx`.
 
 ### 2. Commit Message Convention
@@ -22,6 +28,12 @@ This starter is using [conventional commits](https://www.conventionalcommits.org
 
 - (fred's lit figma)[https://www.figma.com/file/j1aWuROiOzpL19GH3FZDTX/PC69?node-id=46%3A125&t=eHMRaZX5SK4fyDre-1]
 - (google doc)[https://docs.google.com/document/d/1ikxMs5YBr1QKO6GiMQPqgTLWSrrhM1ZHdFSmvB2PyVU/edit]
+
+## admin
+
+- alchemy (ben has api key)
+- vercel (ben has admin access $20/month)
+- github (raveworld.eth + ben access to org + repo)
 
 ## Repo Configuration
 
