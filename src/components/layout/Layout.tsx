@@ -3,7 +3,7 @@ import * as React from 'react';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <>
+    <div className='bg-primary min-h-screen w-full'>
       <video
         preload='auto'
         playsInline
@@ -12,9 +12,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         loop
         className='absolute h-screen w-full'
       >
-        <source src='/video/inkblot1080.mp4' type='video/mp4' />
+        <source src='/video/inkblot1080.mp4' type='video/mp4; codecs="hvc1"' />
+        <source src='/video/inkblot1080.webm' type='video/webm' />
       </video>
-      <div className='bg-primary absolute z-10 flex h-screen min-h-screen w-full flex-col backdrop-invert backdrop-opacity-10'>
+      <div className='absolute z-10 flex h-screen min-h-screen w-full flex-col'>
         <Link href='/' className='block py-2 px-4'>
           Portionclub69
         </Link>
@@ -49,6 +50,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </a>
         </footer>
       </div>
-    </>
+    </div>
   );
 }
