@@ -110,7 +110,7 @@ const favicons: Array<React.ComponentPropsWithoutRef<'link'>> = [
   {
     rel: 'mask-icon',
     href: '/favicon/safari-pinned-tab.svg',
-    color: '#00e887',
+    color: '#171819',
   },
   { rel: 'shortcut icon', href: '/favicon/favicon.ico' },
 ];

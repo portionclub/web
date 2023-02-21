@@ -86,6 +86,7 @@
   .p {
     @apply font-primary text-sm md:text-base;
   }
+
   /* #endregion  /**======== Typography =========== */
 
   .layout {
