@@ -30,6 +30,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         className='fixed top-0 left-0 -z-[1] h-full w-full bg-dark object-contain object-top sm:object-center'
       >
         <source src='/video/inkblot1080.webm' type='video/webm' />
+        {/* <source src='/video/inkblot1080.mp4' type='video/mp4; codecs=hvc1' /> */}
       </video>
       <div className='flex h-full w-full flex-col'>
         <Link href='/' className='block py-2 px-4'>
