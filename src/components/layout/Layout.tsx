@@ -53,7 +53,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             className='border-l text-white'
           />
           <NavItem
-            link='https://discord.gg/RDtPAqm62z'
+            link='https://nouns.build/dao/0x0c12aba58fc88f1267fa772012495b47aaf31cab'
             title='Join'
             description='Buy an NFT on Nouns Builder for access'
             className='border-highlight bg-highlight text-dark'
