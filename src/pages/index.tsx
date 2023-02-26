@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import * as React from 'react';
 
 import Layout from '../components/layout/Layout';
@@ -17,6 +18,10 @@ export default function HomePage() {
       <Seo templateTitle='Home' />
 
       <section className='px-2'>
+        <p className='mb-14 inline-block bg-highlight p-2 font-["Comic_Sans_MS"] text-dark'>
+          At ETH Denver? Us too! Link with us in person{' '}
+          <Link href='https://twitter.com/portionclub69'>@portionclub69</Link>
+        </p>
         <h1 className='normal text-6xl sm:text-9xl'>
           Welcome to Portion Club 69
         </h1>
