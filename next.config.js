@@ -1,24 +1,21 @@
 /** @type {import('next').NextConfig} */
-
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const withTM = require('next-transpile-modules')([
-  '@public-assembly/dao-utils',
-]);
-
 const nextConfig = {
+  eslint: {
+    dirs: ['src'],
+  },
+
   reactStrictMode: true,
   swcMinify: true,
-  webpack: (config) => {
-    config.module.rules.push({
-      test: /\.(md|mdx)?$/,
-      use: [
-        {
-          loader: '@mdx-js/loader',
-          /** @type {import('@mdx-js/loader').Options} */
-          options: {},
-        },
-      ],
-    });
+
+  // Uncoment to add domain whitelist
+  // images: {
+  //   domains: [
+  //     'res.cloudinary.com',
+  //   ],
+  // },
+
+  // SVGR
+  webpack(config) {
     config.module.rules.push({
       test: /\.svg$/i,
       issuer: /\.[jt]sx?$/,
@@ -32,12 +29,9 @@ const nextConfig = {
         },
       ],
     });
+
     return config;
-  },
-  pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
-  experimental: {
-    esmExternals: 'loose',
   },
 };
 
-module.exports = withTM(nextConfig);
+module.exports = nextConfig;

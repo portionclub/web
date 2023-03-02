@@ -1,16 +1,8 @@
-import {
-  getDefaultWallets,
-  lightTheme,
-  RainbowKitProvider,
-} from '@rainbow-me/rainbowkit';
-import { NFTFetchConfiguration } from '@zoralabs/nft-hooks/dist/context/NFTFetchContext';
-import { ZDKFetchStrategy } from '@zoralabs/nft-hooks/dist/strategies';
+import { getDefaultWallets, RainbowKitProvider } from '@rainbow-me/rainbowkit';
 import { AppProps } from 'next/app';
-import NextNProgress from 'nextjs-progressbar';
 import React from 'react';
-import { SWRConfig } from 'swr';
-import { configureChains, createClient, WagmiConfig } from 'wagmi';
-import { goerli, mainnet } from 'wagmi/chains';
+import { configureChains, createClient, goerli, WagmiConfig } from 'wagmi';
+import { mainnet } from 'wagmi/chains';
 import { alchemyProvider } from 'wagmi/providers/alchemy';
 import { publicProvider } from 'wagmi/providers/public';
 
@@ -37,40 +29,11 @@ const wagmiClient = createClient({
   provider,
 });
 
-export const strategy = new ZDKFetchStrategy(
-  '1',
-  'https://api.zora.co/graphql'
-);
-
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <WagmiConfig client={wagmiClient}>
-      <RainbowKitProvider
-        chains={chains}
-        coolMode
-        theme={lightTheme({
-          accentColor: 'black',
-          borderRadius: 'large',
-        })}
-      >
-        <NFTFetchConfiguration networkId='1' strategy={strategy}>
-          <SWRConfig
-            value={{
-              fetcher: (resource, init) =>
-                fetch(resource, init).then((res) => res.json()),
-            }}
-          >
-            <NextNProgress
-              color='#ff89de'
-              startPosition={0.125}
-              stopDelayMs={200}
-              height={2}
-              showOnShallow={true}
-              options={{ showSpinner: false }}
-            />
-            <Component {...pageProps} />
-          </SWRConfig>
-        </NFTFetchConfiguration>
+      <RainbowKitProvider chains={chains}>
+        <Component {...pageProps} />
       </RainbowKitProvider>
     </WagmiConfig>
   );
