@@ -14,7 +14,9 @@ const NavItem = ({
 }) => (
   <a className={`${className} block w-4/12 border-t p-6`} href={link}>
     <div className='xm:text-3xl text-2xl sm:text-4xl'>{title}</div>
-    <div className='hidden text-lg md:block'>{description}</div>
+    <div className='hidden h-[30px] text-lg leading-5 md:block'>
+      {description}
+    </div>
   </a>
 );
 
