@@ -14,12 +14,6 @@ yarn install
 yarn dev
 ```
 
-to use environment variables (stored on vercel) use:
-
-```bash
-vercel dev
-```
-
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result. You can start editing the page by modifying `src/pages/index.tsx`.
 
 ### 2. Commit Message Convention
