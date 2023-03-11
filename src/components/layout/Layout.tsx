@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import * as React from 'react';
 
@@ -35,9 +36,31 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         {/* <source src='/video/inkblot1080.mp4' type='video/mp4; codecs=hvc1' /> */}
       </video>
       <div className='flex h-full w-full flex-col'>
-        <Link href='/' className='block py-2 px-4'>
-          Portionclub69
-        </Link>
+        <div className='flex flex-row items-center justify-between px-8 pt-4'>
+          <Link href='/' className='block text-[24px]'>
+            Portionclub69
+          </Link>
+          <div className='flex flex-row space-x-[16px]'>
+            <Link href='https://www.twitter.com/PortionClub69'>
+              <Image
+                priority
+                src='/images/twitter.svg'
+                height={24}
+                width={24}
+                alt='Follow us on Twitter'
+              />
+            </Link>
+            <Link href='https://discord.gg/9WzKDVF3XN'>
+              <Image
+                priority
+                src='/images/discord.svg'
+                height={24}
+                width={24}
+                alt='Join our Discord server'
+              />
+            </Link>
+          </div>
+        </div>
         <main className='mx-auto mt-16 flex w-full max-w-[910px] flex-1 flex-col items-center justify-center text-center sm:mt-0'>
           {children}
         </main>
