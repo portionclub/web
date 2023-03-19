@@ -1,11 +1,11 @@
-import { utils } from 'ethers';
+import { getAddress } from 'ethers';
 
 export function shortenAddress(address?: string, chars = 4): string {
   if (!address) {
     return '';
   }
 
-  const parsed = utils.getAddress(address);
+  const parsed = getAddress(address);
 
   if (!parsed) {
     // eslint-disable-next-line no-console
