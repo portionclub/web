@@ -10,25 +10,13 @@ const AuctionModule = dynamic(() => import('../AuctionModule'), {
 const NavItem = ({
   link,
   title,
-  description,
-  className,
   ...props
 }: {
   link?: string;
   title: string;
-  description: string;
-  className: string;
-  onClick?: (e: React.MouseEvent) => void;
 }) => (
-  <a
-    {...props}
-    className={`${className} block w-4/12 cursor-pointer border-t p-6`}
-    href={link}
-  >
-    <div className='xm:text-3xl text-2xl sm:text-4xl'>{title}</div>
-    <div className='hidden h-[30px] text-lg leading-5 md:block'>
-      {description}
-    </div>
+  <a {...props} className='block h-16 cursor-pointer py-1' href={link}>
+    <div className='text-3xl transition-all hover:text-4xl'>{title}</div>
   </a>
 );
 
@@ -55,10 +43,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <source src='/video/inkblot1080.webm' type='video/webm' />
         <source src='/video/inkblot1080.mp4' type='video/mp4; codecs=hvc1' />
       </video>
-      <div className='flex h-[80vh] w-full flex-col'>
+      <div className='flex h-[80vh] w-full flex-col p-4'>
         <div
           className={classnames(
-            'fixed top-4 m-auto flex max-w-[300px] flex-col gap-8 rounded-l-xl bg-highlight p-4 text-dark transition-all',
+            'fixed top-4 m-auto flex max-w-[300px] flex-col gap-8 rounded-l-xl bg-highlight text-dark transition-all',
             {
               'right-0': showAuction,
               '-right-full': !showAuction,
@@ -67,31 +55,29 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         >
           <AuctionModule address='0x0c12aba58fc88f1267fa772012495b47aaf31cab' />
         </div>
-        <Link href='/' className='block py-2 px-4'>
-          Portionclub69
-        </Link>
-        <main className='mx-auto mt-16 flex w-full max-w-[910px] flex-1 flex-col items-center justify-center text-center sm:mt-0'>
-          {children}
-        </main>
-        <nav className='fixed bottom-0 flex w-full items-center'>
+        <div className='flex w-full items-center justify-between'>
+          <Link href='/' className='block py-2'>
+            Portionclub69
+          </Link>
+          <button
+            className='m-3 block bg-highlight py-2 px-4 text-dark'
+            onClick={toggleAuction}
+          >
+            Join
+          </button>
+        </div>
+        <main>{children}</main>
+        <nav className='mt-10'>
           <NavItem
             link='https://pc69.xyz/u/portionclub69/pages'
             title='Projects'
-            description='4 projects currently in progress'
-            className='text-white'
           />
+          <NavItem link='/proposals' title='Proposals' />
           <NavItem
-            link='https://discord.gg/RDtPAqm62z'
-            title='Discord'
-            description='Nonmembers can chat in public channels'
-            className='border-l text-white'
+            link='https://pc69.xyz/u/portionclub69/events'
+            title='Events'
           />
-          <NavItem
-            onClick={toggleAuction}
-            title='Join'
-            description='Buy an NFT for access'
-            className='border-highlight bg-highlight text-dark'
-          />
+          <NavItem link='/members' title='Members' />
         </nav>
       </div>
     </div>
