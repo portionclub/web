@@ -26,14 +26,14 @@ const NavItem = ({
 );
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-  const [showAuction, _] = React.useState(false);
-  // const toggleAuction = React.useCallback(
-  //   (e: React.MouseEvent) => {
-  //     e.preventDefault();
-  //     setShowAuction(!showAuction);
-  //   },
-  //   [showAuction]
-  // );
+  const [showAuction, setShowAuction] = React.useState(false);
+  const toggleAuction = React.useCallback(
+    (e: React.MouseEvent) => {
+      e.preventDefault();
+      setShowAuction(!showAuction);
+    },
+    [showAuction]
+  );
 
   return (
     <>
@@ -57,18 +57,18 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <Link href='/' className='block py-2'>
               Portionclub69
             </Link>
-            {/* <button
+            <button
               className='m-3 block bg-highlight py-2 px-4 text-dark'
               onClick={toggleAuction}
             >
               Join
-            </button> */}
-            <Link
+            </button>
+            {/* <Link
               className='m-3 block bg-highlight py-2 px-4 text-dark'
               href='https://nouns.build/dao/0x0c12aba58fc88f1267fa772012495b47aaf31cab'
             >
               Join
-            </Link>
+            </Link> */}
           </div>
           <main>{children}</main>
           <nav className='mt-10'>

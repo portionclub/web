@@ -8,6 +8,7 @@ module.exports = {
     extend: {
       fontFamily: {
         primary: ['Mondwest', ...fontFamily.sans],
+        secondary: ['Neuebit', ...fontFamily.sans],
       },
       colors: {
         primary: {
@@ -25,6 +26,8 @@ module.exports = {
         },
         dark: '#171819',
         highlight: '#BAEC68',
+        shadow: '#888F91',
+        offwhite: '#F2F2F2',
       },
       keyframes: {
         flicker: {

@@ -2179,10 +2179,10 @@
   resolved "https://registry.yarnpkg.com/@pedrouid/environment/-/environment-1.0.1.tgz#858f0f8a057340e0b250398b75ead77d6f4342ec"
   integrity sha512-HaW78NszGzRZd9SeoI3JD11JqY+lubnaOx7Pewj5pfjqWXOEATpeKIFb9Z4t2WBUK2iryiXX3lzWwmYWgUL0Ug==
 
-"@public-assembly/dao-utils@^0.0.5":
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/@public-assembly/dao-utils/-/dao-utils-0.0.5.tgz#44c24d72a3a29ccbab1b2f80e8093630843520f9"
-  integrity sha512-ySBeY35rFWXngT9957SaWgki8sWMl3e2N+zMdhLSYkL2HDUq1GD3t+ZQ58hPk3ILUBIDypUahZTjux8/p4wF4A==
+"@public-assembly/dao-utils@^0.0.15":
+  version "0.0.15"
+  resolved "https://registry.yarnpkg.com/@public-assembly/dao-utils/-/dao-utils-0.0.15.tgz#02c09cc97cfa8f01b286720b8fc128533ce28cad"
+  integrity sha512-8rBKf9GcoBrG9z6UtJR3jCO/OYtLB2skSXhnakWOqN8CxBmA0nnmX3nkjhKvkiXptrtXLR5XBuJF7Cc5pHLZ7w==
 
 "@rainbow-me/rainbowkit@^0.11.0":
   version "0.11.1"

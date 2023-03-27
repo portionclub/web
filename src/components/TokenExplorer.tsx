@@ -1,93 +1,101 @@
-// eslint-disable-next-line import/no-anonymous-default-export, @typescript-eslint/no-empty-function
-export default function () {}
+import {
+  CurrentAuction,
+  TokenRenderer,
+  useDaoCollectionQuery,
+} from '@public-assembly/dao-utils';
+import Image from 'next/image';
+import React from 'react';
 
-// import * as React from 'react';
+export interface TokenExplorerProps extends React.HTMLProps<HTMLDivElement> {
+  /**
+   * Nounish NFT Contract address
+   */
+  tokenAddress: `0x${string}`;
+  /**
+   * Renderer Component for current auction
+   */
+  auctionRenderer?: React.ReactNode;
+  /**
+   * Renderer Component for dao tokens
+   */
+  tokenRenderer?: (tokenId: string) => React.ReactNode;
+  /**
+   * Button to handle wallet connection
+   */
+  connectButton?: React.ReactNode;
+}
 
-// import CircleArrow from './CircleArrow';
-// import CurrentAuction from './CurrentAuction';
-// import TokenRenderer from './TokenRenderer';
-// import { useDaoCollectionQuery } from '../hooks';
+export default function TokenExplorer({
+  tokenAddress,
+  auctionRenderer,
+  tokenRenderer,
+  connectButton,
+  ...props
+}: TokenExplorerProps) {
+  const { nftCount } = useDaoCollectionQuery({ tokenAddress: tokenAddress });
 
-// export interface TokenExplorerProps extends React.HTMLProps<HTMLDivElement> {
-//   /**
-//    * Nounish NFT Contract address
-//    */
-//   tokenAddress: `0x${string}`;
-//   /**
-//    * Renderer Component for current auction
-//    */
-//   auctionRenderer?: React.ReactNode;
-//   /**
-//    * Renderer Component for dao tokens
-//    */
-//   tokenRenderer?: React.ReactNode;
-//   /**
-//    * Button to handle wallet connection
-//    */
-//   connectButton?: React.ReactNode;
-// }
+  const [tokenId, setTokenId] = React.useState(0);
 
-// export default function TokenExplorer({
-//   tokenAddress,
-//   auctionRenderer,
-//   connectButton,
-//   ...props
-// }: TokenExplorerProps) {
-//   const { nftCount } = useDaoCollectionQuery({ tokenAddress: tokenAddress });
+  React.useEffect(() => {
+    nftCount && setTokenId(nftCount - 1);
+  }, [nftCount]);
 
-//   const [tokenId, setTokenId] = React.useState(0);
+  const incrementId = React.useCallback(() => {
+    if (nftCount && tokenId < nftCount - 1) {
+      setTokenId(tokenId + 1);
+    }
+  }, [nftCount, tokenId]);
 
-//   React.useEffect(() => {
-//     nftCount && setTokenId(nftCount - 1);
-//   }, [nftCount]);
+  // const decrementId = React.useCallback(() => {
+  //   if (nftCount && tokenId > 0) {
+  //     setTokenId(tokenId - 1);
+  //   }
+  // }, [nftCount, tokenId]);
 
-//   const incrementId = React.useCallback(() => {
-//     if (nftCount && tokenId < nftCount - 1) {
-//       setTokenId(tokenId + 1);
-//     }
-//   }, [setTokenId, tokenId]);
+  if (!nftCount) return null;
 
-//   const decrementId = React.useCallback(() => {
-//     if (nftCount && tokenId > 0) {
-//       setTokenId(tokenId - 1);
-//     }
-//   }, [setTokenId, tokenId]);
-
-//   if (!nftCount) return null;
-
-//   return (
-//     <div {...props} className='flex flex-col gap-2'>
-//       {tokenId === nftCount - 1 ? (
-//         <>
-//           {auctionRenderer || (
-//             <CurrentAuction
-//               tokenAddress={tokenAddress}
-//               connectButton={connectButton}
-//             />
-//           )}
-//         </>
-//       ) : (
-//         <TokenRenderer
-//           tokenAddress={tokenAddress}
-//           tokenId={tokenId?.toString()!}
-//         />
-//       )}
-//       <div className='flex flex-row gap-1'>
-//         <button
-//           onClick={decrementId}
-//           className={`${tokenId === 0 && 'pointer-events-none opacity-20'}`}
-//         >
-//           <CircleArrow direction='backward' />
-//         </button>
-//         <button
-//           onClick={incrementId}
-//           className={`${
-//             tokenId === nftCount - 1 && 'pointer-events-none opacity-20'
-//           }`}
-//         >
-//           <CircleArrow />
-//         </button>
-//       </div>
-//     </div>
-//   );
-// }
+  return (
+    <div {...props} className='flex flex-col gap-2 bg-offwhite pt-4'>
+      {tokenId === nftCount - 1 ? (
+        <>
+          {auctionRenderer || (
+            <CurrentAuction
+              tokenAddress={tokenAddress}
+              connectButton={connectButton}
+            />
+          )}
+        </>
+      ) : (
+        <>
+          {tokenRenderer ? (
+            tokenRenderer(tokenId.toString())
+          ) : (
+            <TokenRenderer
+              tokenAddress={tokenAddress}
+              tokenId={tokenId.toString()}
+            />
+          )}
+        </>
+      )}
+      <div className='mx-auto mt-2 mb-4 flex flex-row gap-1'>
+        {/* <button
+          onClick={decrementId}
+          className={`${tokenId === 0 && 'pointer-events-none opacity-20'}`}
+        >
+          <Image src='svg/left.svg' alt='Last token' width={16} height={14} />
+        </button> */}
+        <a href={`https://nouns.build/dao/${tokenAddress}/${tokenId - 1}`}>
+          <Image src='svg/left.svg' alt='Last token' width={16} height={14} />
+        </a>
+        <button
+          onClick={incrementId}
+          className={`${
+            tokenId === nftCount - 1 && 'pointer-events-none opacity-20'
+          }`}
+        >
+          <Image src='svg/right.svg' alt='Next token' width={16} height={14} />
+        </button>
+      </div>
+    </div>
+  );
+}

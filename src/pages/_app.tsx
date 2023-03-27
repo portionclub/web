@@ -44,7 +44,7 @@ export const strategy = new ZDKFetchStrategy(
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <div className='bg-dark text-white'>
+    <div className='text-white'>
       <WagmiConfig client={wagmiClient}>
         <RainbowKitProvider
           chains={chains}

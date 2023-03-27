@@ -1,4 +1,5 @@
 import { Dialog, Transition } from '@headlessui/react';
+import Image from 'next/image';
 import { Fragment, useEffect, useRef, useState } from 'react';
 
 export default function Modal({
@@ -48,6 +49,15 @@ export default function Modal({
               leaveTo='opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95'
             >
               <Dialog.Panel className='relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg'>
+                <div className='absolute top-0 left-0 mt-2 ml-2 cursor-pointer rounded-md bg-dark p-4'>
+                  <Image
+                    src='svg/close.svg'
+                    alt='Next token'
+                    width={14}
+                    height={14}
+                    onClick={() => setOpen(false)}
+                  />
+                </div>
                 {children}
               </Dialog.Panel>
             </Transition.Child>
