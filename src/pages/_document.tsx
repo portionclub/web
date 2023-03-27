@@ -20,7 +20,7 @@ export default function Document() {
         />
         <link
           rel='preload'
-          href='/fonts/PPNeuebit-Regular.woff2'
+          href='/fonts/PPNeueBit-Regular.woff2'
           as='font'
           type='font/woff2'
           crossOrigin='anonymous'

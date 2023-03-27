@@ -8,7 +8,7 @@ module.exports = {
     extend: {
       fontFamily: {
         primary: ['Mondwest', ...fontFamily.sans],
-        secondary: ['Neuebit', ...fontFamily.sans],
+        secondary: ['NeueBit', ...fontFamily.sans],
       },
       colors: {
         primary: {
