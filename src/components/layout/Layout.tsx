@@ -1,4 +1,5 @@
 import dynamic from 'next/dynamic';
+import Image from 'next/image';
 import Link from 'next/link';
 import * as React from 'react';
 
@@ -47,11 +48,20 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           autoPlay
           muted
           loop
-          className='fixed top-0 left-0 -z-[1] h-full w-full bg-dark object-contain object-top sm:object-center'
+          className='invisible fixed top-0 left-0 -z-[1] h-full w-full bg-dark object-contain object-top sm:visible sm:object-center'
         >
           <source src='/video/inkblot1080.webm' type='video/webm' />
           <source src='/video/inkblot1080.mp4' type='video/mp4; codecs=hvc1' />
         </video>
+        <div className='fixed top-0 left-0 -z-[1] h-screen w-full bg-dark pt-20 opacity-90'>
+          <Image
+            src='/images/inkblot_logo.png'
+            alt='inkblot'
+            width='3133'
+            height='1304'
+            className='h-full w-full object-contain object-top'
+          />
+        </div>
         <div className='flex h-[80vh] w-full flex-col p-4'>
           <div className='flex w-full items-center justify-between'>
             <Link href='/' className='block py-2'>
