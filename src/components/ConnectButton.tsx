@@ -5,7 +5,7 @@ import { Avatar } from './Avatar';
 export default function ConnectButton({ ...props }) {
   return (
     <div
-      className='connect-button-wrapper relative flex items-center overflow-hidden rounded-2xl py-1.5 pr-3 pl-3'
+      className='connect-button-wrapper relative flex max-w-fit items-center overflow-hidden rounded-lg bg-highlight py-1.5 pr-3 pl-3'
       {...props}
     >
       <RKConnectButton.Custom>
@@ -15,7 +15,7 @@ export default function ConnectButton({ ...props }) {
               {(() => {
                 if (!mounted || !account || !chain) {
                   return (
-                    <button onClick={openConnectModal} className='text-sm'>
+                    <button onClick={openConnectModal} className='text-lg'>
                       Connect Wallet
                     </button>
                   );

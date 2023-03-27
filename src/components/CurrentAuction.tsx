@@ -46,7 +46,7 @@ export default function CurrentAuction({
 
   return (
     <div {...props}>
-      <div className='mx-auto w-8/12 font-secondary sm:w-6/12'>
+      <div className='mx-auto w-8/12 font-secondary'>
         {auctionData.endTime && (
           <div className='flex w-full flex-col text-center'>
             {!isEnded ? (

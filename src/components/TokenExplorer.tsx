@@ -55,7 +55,7 @@ export default function TokenExplorer({
   if (!nftCount) return null;
 
   return (
-    <div {...props} className='flex flex-col gap-2 bg-offwhite pt-4'>
+    <div {...props} className='flex flex-col gap-2 bg-offwhite pt-1'>
       {tokenId === nftCount - 1 ? (
         <>
           {auctionRenderer || (
