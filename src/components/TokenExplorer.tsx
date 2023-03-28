@@ -34,13 +34,14 @@ export default function TokenExplorer({
 }: TokenExplorerProps) {
   const { nftCount } = useDaoCollectionQuery({ tokenAddress: tokenAddress });
 
-  const [tokenId, setTokenId] = React.useState(0);
+  const [tokenId, setTokenId] = React.useState<number>();
 
   React.useEffect(() => {
     nftCount && setTokenId(nftCount - 1);
   }, [nftCount]);
 
   const incrementId = React.useCallback(() => {
+    if (typeof tokenId === 'undefined') return;
     if (nftCount && tokenId < nftCount - 1) {
       setTokenId(tokenId + 1);
     }
@@ -52,7 +53,7 @@ export default function TokenExplorer({
   //   }
   // }, [nftCount, tokenId]);
 
-  if (!nftCount) return null;
+  if (!nftCount || typeof tokenId === 'undefined') return null;
 
   return (
     <div {...props} className='flex flex-col gap-2 bg-offwhite pt-1'>

@@ -53,7 +53,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <source src='/video/inkblot1080.webm' type='video/webm' />
           <source src='/video/inkblot1080.mp4' type='video/mp4; codecs=hvc1' />
         </video>
-        <div className='fixed top-0 left-0 -z-[1] h-screen w-full bg-dark pt-20 opacity-90'>
+        <div className='visible fixed top-0 left-0 -z-[1] h-screen w-full bg-dark pt-10 sm:invisible'>
           <Image
             src='/images/inkblot_logo.png'
             alt='inkblot'
@@ -80,7 +80,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               Join
             </Link> */}
           </div>
-          <main>{children}</main>
+          <main className='pt-12 sm:pt-0'>{children}</main>
           <nav className='mt-10'>
             <NavItem
               link='https://pc69.xyz/u/portionclub69/pages'
