@@ -26,7 +26,13 @@ const NavItem = ({
   </a>
 );
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default function Layout({
+  children,
+  hideNav,
+}: {
+  children: React.ReactNode;
+  hideNav?: boolean;
+}) {
   const [showAuction, setShowAuction] = React.useState(false);
   const toggleAuction = React.useCallback(
     (e: React.MouseEvent) => {
@@ -81,18 +87,17 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             </Link> */}
           </div>
           <main className='pt-12 sm:pt-0'>{children}</main>
-          <nav className='mt-10'>
-            <NavItem
-              link='https://pc69.xyz/u/portionclub69/pages'
-              title='Projects'
-            />
-            {/* <NavItem link='/proposals' title='Proposals' /> */}
-            <NavItem
+          {!hideNav && (
+            <nav className='mt-10'>
+              <NavItem link='projects' title='Projects' />
+              {/* <NavItem link='/proposals' title='Proposals' /> */}
+              {/* <NavItem
               link='https://pc69.xyz/u/portionclub69/events'
               title='Events'
-            />
-            {/* <NavItem link='/members' title='Members' /> */}
-          </nav>
+            /> */}
+              {/* <NavItem link='/members' title='Members' /> */}
+            </nav>
+          )}
         </div>
       </div>
     </>
