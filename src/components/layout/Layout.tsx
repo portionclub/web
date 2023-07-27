@@ -89,7 +89,7 @@ export default function Layout({
           <main className='pt-12 sm:pt-0'>{children}</main>
           {!hideNav && (
             <nav className='mt-10'>
-              <NavItem link='projects' title='Projects' />
+              <NavItem link='/projects' title='Projects' />
               {/* <NavItem link='/proposals' title='Proposals' /> */}
               {/* <NavItem
               link='https://pc69.xyz/u/portionclub69/events'

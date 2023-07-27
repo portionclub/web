@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import * as React from 'react';
 
 import Layout from '@/components/layout/Layout';
@@ -21,12 +22,15 @@ export default function HomePage() {
           ARTIST: Jonathan Hall 📼 TITLE: AIGHT TAPE SUPPLY: 5 EDITIONS HOLDERS
           OF AIGHT: SKATE 📼 TAPE (NFT) ARE WELCOME TO REDEEM FOR PHYSICAL 📼
           (VHS) AIGHT📼 TAPE RELEASE INCLUDES: - 1 SKATE VIDEO RIPPED TO 5
-          UNIQUE VHS TAPES - 5 VIDEO NFT EDITIONS via PC69 - 5 3D NFT's
-          viadesigned by John Hall
+          UNIQUE VHS TAPES - 5 VIDEO NFT EDITIONS via PC69 - 5 3D NFT's designed
+          by John Hall
         </p>
-        <a href='https://tell.ie/portionclub69/VHS'>
+        <Link
+          className='text-blue-500 underline'
+          href='/projects/VHSRedemptionPage'
+        >
           AIGHT NFT 📼 HOLDERS: CLICK HERE TO REDEEM PHYSICAL VHS TAPE
-        </a>
+        </Link>
         <p></p>
         <p>
           <strong>SKATE 📼 NFT SUPPLY:</strong> 5 EDITIONS{' '}
@@ -133,7 +137,7 @@ export default function HomePage() {
           PC69 presents a 2 part NFT drop featuring "AIGHT: SKATE 📼 TAPE " by
           Jonathan Hall.{' '}
         </p>
-        <div className='mb-4 rounded-lg bg-gray-200 p-4'>
+        <div className='mb-4 rounded-lg p-4'>
           <a
             href='https://rarible.com/token/0xfb96803b9af97b42f5c7393d853b6e4713b9c460:3?tab=details'
             className='text-blue-500 underline'
@@ -142,32 +146,47 @@ export default function HomePage() {
           </a>
           <p className='mb-2 text-lg'>.0255 ETH</p>
         </div>
-        <div className='mb-4 rounded-lg bg-gray-200 p-4'>
-          <a href='https://rarible.com/token/0xfb96803b9af97b42f5c7393d853b6e4713b9c460:4?tab=details'>
+        <div className='mb-4 rounded-lg p-4'>
+          <a
+            className='text-blue-500 underline'
+            href='https://rarible.com/token/0xfb96803b9af97b42f5c7393d853b6e4713b9c460:4?tab=details'
+          >
             AIGHT: SKATE 📼 TAPE #2/5
           </a>
           <p className='mb-2 text-lg'>.0255 ETH</p>
         </div>
-        <div className='mb-4 rounded-lg bg-gray-200 p-4'>
-          <a href='https://rarible.com/token/0xfb96803b9af97b42f5c7393d853b6e4713b9c460:5?tab=details'>
+        <div className='mb-4 rounded-lg p-4'>
+          <a
+            className='text-blue-500 underline'
+            href='https://rarible.com/token/0xfb96803b9af97b42f5c7393d853b6e4713b9c460:5?tab=details'
+          >
             AIGHT: SKATE 📼 TAPE #3/5
           </a>
           <p className='mb-2 text-lg'>.0255 ETH</p>
         </div>
-        <div className='mb-4 rounded-lg bg-gray-200 p-4'>
-          <a href='https://rarible.com/token/0xfb96803b9af97b42f5c7393d853b6e4713b9c460:6?tab=details'>
+        <div className='mb-4 rounded-lg p-4'>
+          <a
+            className='text-blue-500 underline'
+            href='https://rarible.com/token/0xfb96803b9af97b42f5c7393d853b6e4713b9c460:6?tab=details'
+          >
             AIGHT: SKATE 📼 TAPE #4/5
           </a>
           <p className='mb-2 text-lg'>.0255 ETH</p>
         </div>
-        <div className='mb-4 rounded-lg bg-gray-200 p-4'>
-          <a href='https://rarible.com/token/0xfb96803b9af97b42f5c7393d853b6e4713b9c460:7?tab=details'>
+        <div className='mb-4 rounded-lg p-4'>
+          <a
+            className='text-blue-500 underline'
+            href='https://rarible.com/token/0xfb96803b9af97b42f5c7393d853b6e4713b9c460:7?tab=details'
+          >
             AIGHT: SKATE 📼 TAPE #5/5
           </a>
           <p className='mb-2 text-lg'>.0255 ETH</p>
         </div>
-        <div className='mb-4 rounded-lg bg-gray-200 p-4'>
-          <a href='https://rarible.com/token/0xbfe46a1a7898d4cf7b021ee28cba0c7d855b1468:9?tab=owners'>
+        <div className='mb-4 rounded-lg p-4'>
+          <a
+            className='text-blue-500 underline'
+            href='https://rarible.com/token/0xbfe46a1a7898d4cf7b021ee28cba0c7d855b1468:9?tab=owners'
+          >
             AIGHT 🏆 TROPHY
           </a>
           <p className='mb-2 text-lg'>.02 ETH</p>

@@ -21,7 +21,7 @@ const Project = ({ href, image, title, description }) => {
       className='hover:active mt-4 block origin-top-right text-2xl transition-all duration-500 hover:scale-125 hover:brightness-100 sm:text-4xl sm:brightness-[.9]'
     >
       <Tilt
-        className='bg-deepBlue bg-starfield shadow-moon vsm:max-w-[414px] vmd:max-w-[514px] vlg:max-w-[614px] relative mb-40 aspect-[2/3] max-w-[314px] rounded-[28px] bg-cover'
+        className='relative mb-40 aspect-[2/3] max-w-[314px]'
         style={{
           transformStyle: 'preserve-3d',
           transform: 'perspective(1000px)',
