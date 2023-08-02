@@ -80,14 +80,14 @@ const PROJECTS = [
   {
     title: 'LAWBSTARZ',
     href: 'https://www.scatter.art/lawbstarz',
-    image: '/images/lawbstarz/page-thumbnail.png',
+    image: '/images/lawbstarz/lawbstarz_tease 2.gif',
     description:
       '☆ LAWBSTARZ 666x LOBSTERS DRIPPED IN BUTTER ☆ 666x PREMIUM PFP COLLECTION ☆ LAWBSTARZ IS A MUSIC NFT ☆ LAWBSTARZ IS AN ALLSTARZ DERIVATIVE ☆ LAWBSTARZ IS INSPIRED BY REMILIA CORP ☆ LED BY NETWORK SPIRITUALITY ☆ 666 CIGAWRETTEPACKS WERE CONSUMED BY PORTIONCLUB69 AND FRIENDS DURING THE CREATION OF LAW',
   },
   {
     title: 'VOXELS',
     href: 'https://www.voxels.com/play?coords=SW@14W,5052N',
-    image: '/images/voxel/pcvoxel1_1.gif',
+    image: '/images/voxel/pc_builder_6.gif',
     description:
       'PORTION CLUB VOXELS PLOT (SICK.SHIT.ONLY.) LIVE MUSIC + MERCH + $SCOOP SHOP! SIGN GUEST BOOK ON 2ND FLOOR!',
   },
@@ -96,6 +96,12 @@ const PROJECTS = [
     href: 'https://www.oncyber.com/portionclub',
     image: '/images/oncyber/oncyber_loop.gif',
     description: '3D GALLERY DISPLAYING ART PRODUCED OR COLLECTED BY PC69',
+  },
+  {
+    title: 'XTRAFORMS v.3',
+    href: 'https://www.oncyber.com/portionclub',
+    image: '/images/oncyber/oncyber_loop.gif',
+    description: 'ANIMATED COLLECTION BY XDrar minting on Zora',
   },
 ];
 
