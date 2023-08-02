@@ -95,12 +95,13 @@ const PROJECTS = [
     title: 'ONCYBER GALLERY',
     href: 'https://www.oncyber.com/portionclub',
     image: '/images/oncyber/oncyber_loop.gif',
-    description: '3D GALLERY DISPLAYING ART PRODUCED OR COLLECTED BY PC69',
+    description:
+      '3D GALLERY DISPLAYING SOME ART PRODUCED BY OR COLLECTED BY PC69',
   },
   {
     title: 'XTRAFORMS v.3',
-    href: 'https://www.oncyber.com/portionclub',
-    image: '/images/oncyber/oncyber_loop.gif',
+    href: 'https://zora.co/collect/eth:0xde86c77cbe7e479b0a0ec1ff6a6017236e35f14a',
+    image: '/images/xtraforms3/xtraforms3_xdrar.gif',
     description: 'ANIMATED COLLECTION BY XDrar minting on Zora',
   },
 ];
