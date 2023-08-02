@@ -87,7 +87,7 @@ const PROJECTS = [
   {
     title: 'VOXELS',
     href: 'https://www.voxels.com/play?coords=SW@14W,5052N',
-    image: '/public/images/voxel/pcvoxel1_1.gif',
+    image: '/images/voxel/pcvoxel1_1.gif',
     description:
       'PORTION CLUB VOXELS PLOT (SICK.SHIT.ONLY.) LIVE MUSIC + MERCH + $SCOOP SHOP! SIGN GUEST BOOK ON 2ND FLOOR!',
   },
