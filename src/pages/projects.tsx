@@ -94,7 +94,7 @@ const PROJECTS = [
   {
     title: 'ONCYBER GALLERY',
     href: 'https://www.oncyber.com/portionclub',
-    image: '/images/voxel/pcvoxel1_1.gif',
+    image: '/images/oncyber/oncyber_loop.gif',
     description: '3D GALLERY DISPLAYING ART PRODUCED OR COLLECTED BY PC69',
   },
 ];
