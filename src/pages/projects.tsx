@@ -91,6 +91,12 @@ const PROJECTS = [
     description:
       'PORTION CLUB VOXELS PLOT (SICK.SHIT.ONLY.) LIVE MUSIC + MERCH + $SCOOP SHOP! SIGN GUEST BOOK ON 2ND FLOOR!',
   },
+  {
+    title: 'ONCYBER GALLERY',
+    href: 'https://www.oncyber.com/portionclub',
+    image: '/images/voxel/pcvoxel1_1.gif',
+    description: '3D GALLERY DISPLAYING ART PRODUCED OR COLLECTED BY PC69',
+  },
 ];
 
 export default function HomePage() {
