@@ -52,6 +52,13 @@ const Project = ({ href, image, title, description }) => {
 
 const PROJECTS = [
   {
+    href: 'PC MIXTAPE VOL.1',
+    image: '/images/pctapev1/pctapevol1.png',
+    title: 'PORTION CLUB MIXTAPE VOL.',
+    description:
+      "ARTIST: Jonathan Hall \n📼 TITLE: AIGHT TAPE\n\nSUPPLY: 5 EDITIONS  \nHOLDERS OF AIGHT: SKATE 📼 TAPE (NFT) ARE WELCOME TO REDEEM FOR PHYSICAL  📼  (VHS)\n\n\n\nAIGHT📼 TAPE RELEASE INCLUDES:\n\n- 1 SKATE VIDEO RIPPED TO 5 UNIQUE VHS TAPES \n- 5 VIDEO NFT EDITIONS via PC69\n- 5 3D NFT's viadesigned by John Hall",
+  },
+  {
     href: '/projects/aight',
     image: '/images/aight/page-thumbnail.png',
     title: 'AIGHT SKATE 📼 TAPE + NFT',
