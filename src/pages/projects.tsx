@@ -52,18 +52,10 @@ const Project = ({ href, image, title, description }) => {
 
 const PROJECTS = [
   {
-    href: 'PC MIXTAPE VOL.1',
+    title: 'PC TAPE VOL1',
+    href: 'https://zora.co/collect/eth:0xd0c4c3c6297f5bff0ff358d66483f8481a184236',
     image: '/images/pctapev1/pctapevol1.png',
-    title: 'PORTION CLUB MIXTAPE VOL.',
-    description:
-      "ARTIST: Jonathan Hall \n📼 TITLE: AIGHT TAPE\n\nSUPPLY: 5 EDITIONS  \nHOLDERS OF AIGHT: SKATE 📼 TAPE (NFT) ARE WELCOME TO REDEEM FOR PHYSICAL  📼  (VHS)\n\n\n\nAIGHT📼 TAPE RELEASE INCLUDES:\n\n- 1 SKATE VIDEO RIPPED TO 5 UNIQUE VHS TAPES \n- 5 VIDEO NFT EDITIONS via PC69\n- 5 3D NFT's viadesigned by John Hall",
-  },
-  {
-    href: '/projects/aight',
-    image: '/images/aight/page-thumbnail.png',
-    title: 'AIGHT SKATE 📼 TAPE + NFT',
-    description:
-      "ARTIST: Jonathan Hall \n📼 TITLE: AIGHT TAPE\n\nSUPPLY: 5 EDITIONS  \nHOLDERS OF AIGHT: SKATE 📼 TAPE (NFT) ARE WELCOME TO REDEEM FOR PHYSICAL  📼  (VHS)\n\n\n\nAIGHT📼 TAPE RELEASE INCLUDES:\n\n- 1 SKATE VIDEO RIPPED TO 5 UNIQUE VHS TAPES \n- 5 VIDEO NFT EDITIONS via PC69\n- 5 3D NFT's viadesigned by John Hall",
+    description: 'PORTION CLUB MIXTAPE VOLUME 1',
   },
   {
     title: 'portion club dao',
@@ -110,6 +102,13 @@ const PROJECTS = [
     href: 'https://zora.co/collect/eth:0xde86c77cbe7e479b0a0ec1ff6a6017236e35f14a',
     image: '/images/xtraforms3/xtraforms3_xdrar.gif',
     description: 'ANIMATED COLLECTION BY XDrar minting on Zora',
+  },
+  {
+    href: '/projects/aight',
+    image: '/images/aight/page-thumbnail.png',
+    title: 'AIGHT SKATE 📼 TAPE + NFT',
+    description:
+      "ARTIST: Jonathan Hall \n📼 TITLE: AIGHT TAPE\n\nSUPPLY: 5 EDITIONS  \nHOLDERS OF AIGHT: SKATE 📼 TAPE (NFT) ARE WELCOME TO REDEEM FOR PHYSICAL  📼  (VHS)\n\n\n\nAIGHT📼 TAPE RELEASE INCLUDES:\n\n- 1 SKATE VIDEO RIPPED TO 5 UNIQUE VHS TAPES \n- 5 VIDEO NFT EDITIONS via PC69\n- 5 3D NFT's viadesigned by John Hall",
   },
 ];
 
