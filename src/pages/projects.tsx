@@ -84,6 +84,13 @@ const PROJECTS = [
       '☆ LAWBSTARZ 666x LOBSTERS DRIPPED IN BUTTER ☆ 666x PREMIUM PFP COLLECTION ☆ LAWBSTARZ IS A MUSIC NFT ☆ LAWBSTARZ IS AN ALLSTARZ DERIVATIVE ☆ LAWBSTARZ IS INSPIRED BY REMILIA CORP ☆ LED BY NETWORK SPIRITUALITY ☆ 666 CIGAWRETTEPACKS WERE CONSUMED BY PORTIONCLUB69 AND FRIENDS DURING THE CREATION OF LAW',
   },
   {
+    title: 'lawbsters',
+    href: 'https://zora.co/collect/eth:0x0ef7ba09c38624b8e9cc4985790a2f5dbfc1dc42',
+    image: '/images/lawbsters/lawbsterss.webp',
+    description:
+      'lawbsters seem nice but a human run by a lobster will never amout to anything without a roadmap.',
+  },
+  {
     title: 'VOXELS',
     href: 'https://www.voxels.com/play?coords=SW@14W,5052N',
     image: '/images/voxel/pc_builder_6.gif',
