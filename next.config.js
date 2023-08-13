@@ -7,6 +7,10 @@ const withTM = require('next-transpile-modules')([
 
 const nextConfig = {
   reactStrictMode: true,
+  env: {
+    LIVEPEER_KEY: process.env.LIVEPEER_KEY,
+    LIVEPEER_PLAYBACK_ID: process.env.LIVEPEER_PLAYBACK_ID,
+  },
   swcMinify: true,
   webpack: (config) => {
     config.module.rules.push({

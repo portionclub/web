@@ -1,4 +1,9 @@
 import {
+  createReactClient,
+  LivepeerConfig,
+  studioProvider,
+} from '@livepeer/react';
+import {
   getDefaultWallets,
   lightTheme,
   RainbowKitProvider,
@@ -43,6 +48,11 @@ export const strategy = new ZDKFetchStrategy(
 );
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const client = createReactClient({
+    provider: studioProvider({
+      apiKey: process.env.LIVEPEER_KEY || '',
+    }),
+  });
   return (
     <div className='text-white'>
       <WagmiConfig client={wagmiClient}>
@@ -69,7 +79,9 @@ function MyApp({ Component, pageProps }: AppProps) {
                 showOnShallow={true}
                 options={{ showSpinner: false }}
               />
-              <Component {...pageProps} />
+              <LivepeerConfig client={client}>
+                <Component {...pageProps} />
+              </LivepeerConfig>
             </SWRConfig>
           </NFTFetchConfiguration>
         </RainbowKitProvider>
