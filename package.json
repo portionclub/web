@@ -20,6 +20,7 @@
   "dependencies": {
     "@ethersproject/units": "^5.7.0",
     "@headlessui/react": "^1.7.13",
+    "@livepeer/react": "^2.8.0",
     "@public-assembly/dao-utils": "^0.0.15",
     "@rainbow-me/rainbowkit": "^0.11.0",
     "@zoralabs/nft-hooks": "^1.2.1",
